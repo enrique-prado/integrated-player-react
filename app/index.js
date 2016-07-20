@@ -1,9 +1,9 @@
-console.log('React Hours of Operation is up and running!');
+console.log('React Spoken Player is up and running!');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import HrsApp from './containers/HrsApp';
-import HoursDataService from '../services/dataService';
+import SpokenPlayerApp from './containers/SpokenPlayerApp';
+import SpokenPlayerService from '../services/SpokenPlayerService';
 //import MockHoursDataService from '../services/mockDataService'
 
 //Needed for onTouchTap
@@ -13,6 +13,6 @@ import HoursDataService from '../services/dataService';
 injectTapEventPlugin();
 
 ReactDOM.render(
-    <HrsApp dataService={HoursDataService} />,
+    <SpokenPlayerApp dataService={SpokenPlayerService} />,
     document.getElementById('app')
 );

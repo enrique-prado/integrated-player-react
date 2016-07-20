@@ -1,5 +1,4 @@
 var React = require('react');
-var HoursTabContainer = require('../containers/HoursTabContainer');
 import ThemeManager from 'material-ui/lib/styles/theme-manager';
 import SpokenTheme from '../themes/SpokenTheme';
 var MediaPlayBar = require('../components/MediaPlayBar');
@@ -30,12 +29,12 @@ var SpokenPlayerApp = React.createClass({
   childContextTypes : {
     muiTheme: React.PropTypes.object,
   },
-
+/*
   getChildContext() {
     return {
       muiTheme: ThemeManager.getMuiTheme(SpokenTheme),
     };
-  },  
+  },  */
   
   propTypes: {
     dataService: React.PropTypes.object.isRequired,
@@ -56,16 +55,7 @@ var SpokenPlayerApp = React.createClass({
   componentDidMount: function() {
     console.log('componentDidMount CALLED...')
       var self = this;
-      this.props.dataService.loadRecording().then(function(result) {
-        self.setState({
-            customers : result         
-        });
-        if (result.length > 0) {
-            self.setState({
-                selectedCustomer: result[0].label //Select first customer 
-            });
-        }
-    });
+
   },
   
   componentDidUpdate: function(prevProps, prevState) {
@@ -97,11 +87,11 @@ var SpokenPlayerApp = React.createClass({
 
         </div>
         <div className="mainPane" style={appStyles.content}>
-            <MediaPlayBar loadedPct="75" />
+            <MediaPlayBar loadedPct={75}/>
         </div>                    
       </div>
     );
   }
 });
 
-module.exports = HrsApp;
+module.exports = SpokenPlayerApp;

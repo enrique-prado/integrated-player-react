@@ -3,7 +3,7 @@
  * which incorporates components providedby material-ui.
  */
 var React = require('react');
-var LinearProgress = require('material-ui/LinearProgress');
+var LinearProgress = require('material-ui/lib/linear-progress');
 //import Colors from 'material-ui/lib/styles/colors';
 var moment = require('moment');
 

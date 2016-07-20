@@ -342,4 +342,4 @@ var SpokenPlayerService = (function () {
     }
 })();
 
-module.exports = HoursDataService;
+module.exports = SpokenPlayerService;
