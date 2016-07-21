@@ -15,9 +15,11 @@ const appStyles = {
         float:'left',
     },
     content: {
+        position:'relative',
         width:'700px',
         float:'left'
     }
+          
 }
 
 
